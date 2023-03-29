@@ -5,6 +5,7 @@ import { SignupPage } from './componenets/SignupPage';
 import { LoginPage } from './componenets/LoginPage';
 import { ProductFeed } from './componenets/ProductFeed';
 
+
 const PublicRoute = (props) => {
   // token retried
   const token = localStorage.getItem("userToken");
@@ -33,20 +34,25 @@ function App() {
 
   return(
     <>
-
+    
 
       <Routes>
+        
       <Route path="/signup" element={
           <PublicRoute>
             <SignupPage/>
           </PublicRoute>
         } />
         
-        <Route path="/login" element={
+      <Route path="/login" element={
           <PublicRoute>
             <LoginPage/>
           </PublicRoute>
         } />
+        
+        
+          
+      
       
         
 

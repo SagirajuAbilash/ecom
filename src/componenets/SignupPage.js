@@ -35,15 +35,15 @@ export const SignupPage = () => {
         userSchema.validate(values, {abortEarly: false})
         .then((res) => {
             setErrors([])
-            console.log(res);
+            console.log("jj");
             // Signup api call 
-
+                
             signUpApiCall({
                 name: values.name,
                 email: values.email,
                 password: values.password
             }).then((response) => {
-                if(response.data.success){
+                if(response.data.sucess){
                     window.location.href = "/login"
                 }
             }).catch((error) => {

@@ -46,10 +46,11 @@ export const loadTheProducts = async () => {
 export const addProductToTheCart = async (cartID, productID) => {
     return axios({
         method: "POST",
-        url: 'http://localhost:8080/api/v1/products',
+        url: 'http://localhost:8080/api/v1/cart/:cartId',
         headers: HEADERS,
         data: {
             "id": productID,
+            ""
         }
     })
 }
